@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="table" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12345678-1234-1234-1234-123456789012">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="StarParts"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="subreportDataSummary" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "cif",
+	"tax_npwp",
+	"tax_nama",
+	"tax_alamat",
+	"tax_jenispenghasilan",
+	"tax_jumlahbunga",
+	"tax_tarif",
+	"tax_pphpotong"
+		FROM "tax_stg_etax" WHERE  "tax_nama" =  $P{subreportDataSummary}]]>
+	</queryString>
+	<field name="tax_jenispenghasilan" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tax_jenispenghasilan"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_jenispenghasilan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<field name="tax_jumlahbunga" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="tax_jumlahbunga"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_jumlahbunga"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<field name="tax_tarif" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="tax_tarif"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_tarif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<field name="tax_pphpotong" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="tax_pphpotong"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_pphpotong"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<variable name="totalJumlahBunga" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{tax_jumlahbunga}]]></variableExpression>
+	</variable>
+	<variable name="totalPphPotong" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{tax_pphpotong}]]></variableExpression>
+	</variable>
+	<columnHeader>
+		<band height="30">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="1fb2a523-f118-4d5b-9d2c-325386add32e"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="5" width="50" height="20" uuid="83ddf306-0aa5-4f42-97e6-dc8df7088cac"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="5" width="170" height="20" uuid="862ca6d2-a59f-4658-a7f3-53f1950eced2"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="5" width="150" height="20" uuid="b9dde48a-92d0-4137-a743-4df363a667df"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Interest Gross Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="5" width="50" height="20" uuid="4758e120-a71d-4863-bd5e-a0ffc170db63"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tax (%)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="5" width="134" height="20" uuid="79a4d8c8-e5f7-41a3-8dba-bf1dcb68db2e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tax Amount (IDR)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="25" width="555" height="1" uuid="c3318958-f3bc-460b-b2a5-74153155be61"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="fa569c3d-bcff-49c1-8ff7-cf3be5ec4526"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="170" height="20" uuid="6b9ddf74-f69d-4ab7-95a7-3fa19eefcbff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_jenispenghasilan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="0" width="150" height="20" uuid="db6e5df5-034b-4e12-b6f0-27e7edef95c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_jumlahbunga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="50" height="20" uuid="3960720f-cecb-4e37-a1bd-94dbe984788f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_tarif} + " %"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="134" height="20" uuid="f85fabb1-c1e1-4811-9746-a8728aa15ac5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_pphpotong}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="ec970549-fb4d-4eb6-ba30-4f1570e7182e"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="10" width="200" height="20" uuid="c2f4ef0f-5c3a-4105-9e07-f4fffc9876a3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jumlah]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="220" y="10" width="150" height="20" uuid="faffe747-e2e8-4da7-91c7-565f9bec3410"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalJumlahBunga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="10" width="134" height="20" uuid="702f7fea-ae15-4ca3-9f4b-3cd80f5502fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalPphPotong}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="29" width="555" height="1" uuid="910c8d04-b8fc-4440-acf6-e53dbe394945"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>

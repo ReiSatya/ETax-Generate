@@ -1,0 +1,22 @@
+******************* START PROGRAM ******************
+2024-06-28 14:37:26 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-06-28 14:37:26 INFO  Database.configure:18 - configure DB [OK]
+2024-06-28 14:37:26 INFO  SQLData.getCommonParam:578 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-06-28 14:37:26 INFO  SQLData.getParameter:586 - sql=select "parameter_Name", "parameter_Value" from "parameter" WHERE , field="parameter_Name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-06-28 14:37:28 ERROR DBEngine.execute:67 - Exception!!!
+org.postgresql.util.PSQLException: ERROR: column "parameter_Name" does not exist
+  Hint: Perhaps you meant to reference the column "parameter.parameter_name".
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:181)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:133)
+	at id.etax.conn.DBEngine.execute(DBEngine.java:42)
+	at id.etax.utils.SQLData.getParameter(SQLData.java:592)
+	at id.etax.utils.SQLData.getCommonParam(SQLData.java:579)
+	at id.etax.utils.Config.init(Config.java:24)
+	at id.etax.main.Main.main(Main.java:24)

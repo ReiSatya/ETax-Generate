@@ -1,0 +1,720 @@
+******************* START PROGRAM ******************
+2024-07-02 10:47:03 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 10:47:03 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 10:47:03 INFO  SQLData.getCommonParam:578 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 10:47:03 INFO  SQLData.getParameter:586 - sql=select "parameter_Name", "parameter_Value" from "parameter" WHERE , field="parameter_Name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 10:47:05 ERROR DBEngine.execute:67 - Exception!!!
+org.postgresql.util.PSQLException: ERROR: column "parameter_Name" does not exist
+  Hint: Perhaps you meant to reference the column "parameter.parameter_name".
+  Position: 8
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:490)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:408)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:181)
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:133)
+	at id.etax.conn.DBEngine.execute(DBEngine.java:42)
+	at id.etax.utils.SQLData.getParameter(SQLData.java:592)
+	at id.etax.utils.SQLData.getCommonParam(SQLData.java:579)
+	at id.etax.utils.Config.init(Config.java:24)
+	at id.etax.main.Main.main(Main.java:24)
+******************* START PROGRAM ******************
+2024-07-02 10:49:30 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 10:49:30 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 10:49:30 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 10:49:30 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 10:49:32 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 10:49:32 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:10
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+2024-07-02 10:49:33 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 10:49:33 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 10:49:33 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 10:49:35 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 10:49:37 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 10:49:37 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 10:49:41 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 10:49:43 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 10:49:47 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 10:49:49 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 10:49:49 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 10:49:49 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//John Doe.pdf
+2024-07-02 10:49:50 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 10:49:50 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 10:49:51 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 10:49:51 INFO  PDFEngine.generateFile:313 - 12345C 062024
+2024-07-02 10:49:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 10:49:52 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 10:49:52 INFO  PDFEngine.getData:197 - 12345C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//John Doe.pdf :  : 062024
+2024-07-02 10:49:52 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 10:49:52 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 10:49:52 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 10:49:52 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 10:49:52 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 10:49:52 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 10:49:52 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Jane Smith.pdf
+2024-07-02 10:49:52 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 10:49:52 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 10:49:52 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 10:49:52 INFO  PDFEngine.generateFile:313 - 23456C 062024
+2024-07-02 10:49:52 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 10:49:53 INFO  PDFEngine.getData:197 - 23456C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Jane Smith.pdf :  : 062024
+2024-07-02 10:49:53 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 10:49:53 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 10:49:53 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 10:49:53 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 10:49:53 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 10:49:53 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 10:49:53 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 10:49:53 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Alice Johnson.pdf
+2024-07-02 10:49:53 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 10:49:53 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 10:49:53 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 10:49:53 INFO  PDFEngine.generateFile:313 - 34567C 062024
+2024-07-02 10:49:53 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 10:49:54 INFO  PDFEngine.getData:197 - 34567C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Alice Johnson.pdf :  : 062024
+2024-07-02 10:49:54 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 10:49:54 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 10:49:54 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 10:49:54 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 10:49:54 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 10:49:54 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 10:49:54 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 10:49:54 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Bob Brown.pdf
+2024-07-02 10:49:54 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 10:49:54 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 10:49:54 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 10:49:54 INFO  PDFEngine.generateFile:313 - 45678C 062024
+2024-07-02 10:49:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 10:49:55 INFO  PDFEngine.getData:197 - 45678C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Bob Brown.pdf :  : 062024
+2024-07-02 10:49:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 10:49:55 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 10:49:55 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 10:49:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 10:49:55 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 10:49:55 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Rei Satya.pdf
+2024-07-02 10:49:55 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 10:49:55 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 10:49:55 INFO  PDFEngine.generateFile:313 - 56789C 062024
+2024-07-02 10:49:56 INFO  PDFEngine.getData:197 - 56789C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Rei Satya.pdf :  : 062024
+2024-07-02 10:49:56 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 10:49:56 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 10:49:56 INFO  PDFEngine.engine:122 - Retrieved result from the task - kelar
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 13:44:00 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 13:44:00 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 13:44:00 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 13:44:00 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 13:44:01 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 13:44:01 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:47
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 13:44:01 INFO  SchedulerBuilder.<init>:23 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 13:47
+> Finish	: 23:59
+> Group 	: groupMonthly
+******************* START PROGRAM ******************
+2024-07-02 13:44:01 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 13:44:01 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 13:44:01 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 13:44:01 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 13:44:01 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 13:44:01 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:47
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+2024-07-02 13:44:01 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 13:44:01 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:44:02 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:44:02 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 13:44:02 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:44:03 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 13:44:03 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:44:03 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:44:03 INFO  PDFEngine.engine:122 - Retrieved result from the task - no data
+******************** END PROGRAM *******************
+**************** SCHEDULER: Starting ***************
+2024-07-02 13:47:00 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 13:47:00 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:47:00 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:47:00 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 13:47:00 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:47:01 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:47:01 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 13:47:01 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:47:01 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:47:02 INFO  PDFEngine.engine:122 - Retrieved result from the task - no data
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 13:55:49 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 13:55:49 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 13:55:49 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 13:55:49 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 13:55:50 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 13:55:50 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:47
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 13:55:50 INFO  SchedulerBuilder.<init>:23 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 13:47
+> Finish	: 23:59
+> Group 	: groupMonthly
+2024-07-02 13:55:50 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 13:55:50 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 13:55:50 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 13:55:50 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 13:55:50 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:55:51 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:55:51 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 13:55:51 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:55:52 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:55:52 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 13:55:52 INFO  PDFEngine.getData:237 - no data
+2024-07-02 13:55:52 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 13:55:53 INFO  PDFEngine.engine:122 - Retrieved result from the task - no data
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 14:01:25 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 14:01:25 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:01:25 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:01:25 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:01:26 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:01:26 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:47
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 14:01:26 INFO  SchedulerBuilder.<init>:23 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 13:47
+> Finish	: 23:59
+> Group 	: groupMonthly
+2024-07-02 14:01:27 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 14:01:27 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 14:01:27 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 14:01:27 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 14:01:27 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 14:01:27 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 14:01:27 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 14:01:27 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:01:28 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 14:01:28 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:28 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:28 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 14:01:28 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 14:01:28 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 14:01:29 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 14:01:29 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 14:01:30 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 14:01:30 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:30 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:30 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 14:01:30 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 14:01:30 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 14:01:30 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 14:01:31 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 14:01:31 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 14:01:31 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:31 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:31 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 14:01:32 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 14:01:32 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 14:01:32 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 14:01:32 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 14:01:33 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 14:01:34 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:34 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:01:34 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:34 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 14:01:34 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 14:01:34 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 14:01:35 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 14:01:35 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:35 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:35 INFO  PDFEngine.engine:122 - Retrieved result from the task - no data
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 14:01:51 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 14:01:51 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:01:51 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:01:51 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:01:53 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:01:53 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:47
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 14:01:53 INFO  SchedulerBuilder.<init>:23 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 13:47
+> Finish	: 23:59
+> Group 	: groupMonthly
+2024-07-02 14:01:53 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 14:01:53 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 14:01:53 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 14:01:53 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 14:01:53 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:54 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:54 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 14:01:54 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:55 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:55 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 14:01:55 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 14:01:56 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 14:01:56 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:01:56 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:01:56 INFO  PDFEngine.engine:122 - Retrieved result from the task - no data
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 14:03:15 INFO  Config.init:20 - [OK]
+> File	: config.properties
+2024-07-02 14:03:15 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:03:15 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:03:15 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:03:16 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:03:16 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 13:47
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 14:03:16 INFO  SchedulerBuilder.<init>:23 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 13:47
+> Finish	: 23:59
+> Group 	: groupMonthly
+2024-07-02 14:03:16 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 14:03:16 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 14:03:16 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 14:03:16 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 14:03:16 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 14:03:16 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//John Doe.pdf
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 14:03:17 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 14:03:18 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 14:03:18 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 14:03:18 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:03:18 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 14:03:18 INFO  PDFEngine.generateFile:313 - 12345C 062024
+2024-07-02 14:03:18 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 14:03:18 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 14:03:18 INFO  PDFEngine.getData:197 - 12345C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//John Doe.pdf :  : 062024
+2024-07-02 14:03:18 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:03:18 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:03:19 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 14:03:19 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:03:19 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 14:03:19 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Jane Smith.pdf
+2024-07-02 14:03:19 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:03:19 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:03:19 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 14:03:19 INFO  PDFEngine.generateFile:313 - 23456C 062024
+2024-07-02 14:03:19 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 14:03:20 INFO  PDFEngine.getData:197 - 23456C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Jane Smith.pdf :  : 062024
+2024-07-02 14:03:20 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 14:03:20 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:03:20 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:03:20 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 14:03:20 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:03:20 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Alice Johnson.pdf
+2024-07-02 14:03:20 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 14:03:20 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:03:20 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:03:20 INFO  PDFEngine.generateFile:313 - 34567C 062024
+2024-07-02 14:03:20 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 14:03:20 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:03:20 INFO  PDFEngine.getData:197 - 34567C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Alice Johnson.pdf :  : 062024
+2024-07-02 14:03:20 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:03:20 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:03:20 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:03:21 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Bob Brown.pdf
+2024-07-02 14:03:21 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:313 - 45678C 062024
+2024-07-02 14:03:21 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 14:03:21 INFO  PDFEngine.getData:197 - 45678C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Bob Brown.pdf :  : 062024
+2024-07-02 14:03:21 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:03:21 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Rei Satya.pdf
+2024-07-02 14:03:21 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:03:22 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:03:22 INFO  PDFEngine.generateFile:313 - 56789C 062024
+2024-07-02 14:03:22 INFO  PDFEngine.getData:197 - 56789C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Rei Satya.pdf :  : 062024
+2024-07-02 14:03:22 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:03:22 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:03:22 INFO  PDFEngine.engine:122 - Retrieved result from the task - kelar
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 14:36:54 INFO  Config.init:21 - [OK]
+> File	: config.properties
+2024-07-02 14:36:54 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:36:54 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:36:54 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:36:56 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:36:56 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 14:39
+> Finish time	: 23:59
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 14:36:56 INFO  SchedulerBuilder.<init>:21 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 14:39
+> Finish	: 23:59
+> Group 	: groupMonthly
+******************* START PROGRAM ******************
+2024-07-02 14:37:33 INFO  Config.init:21 - [OK]
+> File	: config.properties
+2024-07-02 14:37:33 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:37:33 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:37:33 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:37:35 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:37:35 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 28
+> Start time	: 14:39:00
+> Finish time	: 23:59:00
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 14:37:35 INFO  SchedulerBuilder.<init>:21 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 14:39:00
+> Finish	: 23:59:00
+> Group 	: groupMonthly
+**************** SCHEDULER: Starting ***************
+2024-07-02 14:39:00 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 14:39:00 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 14:39:01 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 14:39:01 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 14:39:01 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 14:39:01 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 14:39:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 14:39:02 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:39:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 14:39:02 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:39:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 14:39:02 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//John Doe.pdf
+2024-07-02 14:39:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 14:39:02 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:39:02 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:39:03 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.generateFile:313 - 12345C 062024
+2024-07-02 14:39:03 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 14:39:03 INFO  PDFEngine.getData:197 - 12345C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//John Doe.pdf :  : 062024
+2024-07-02 14:39:04 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 14:39:04 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:39:04 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:39:05 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 14:39:05 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:39:05 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Jane Smith.pdf
+2024-07-02 14:39:05 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:39:05 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 14:39:05 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:39:05 INFO  PDFEngine.generateFile:313 - 23456C 062024
+2024-07-02 14:39:05 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.getData:197 - 23456C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Jane Smith.pdf :  : 062024
+2024-07-02 14:39:06 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:39:06 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:39:06 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:39:06 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Alice Johnson.pdf
+2024-07-02 14:39:06 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:39:06 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:39:06 INFO  PDFEngine.generateFile:313 - 34567C 062024
+2024-07-02 14:39:06 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.getData:197 - 34567C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Alice Johnson.pdf :  : 062024
+2024-07-02 14:39:06 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:39:06 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:39:06 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:39:07 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Bob Brown.pdf
+2024-07-02 14:39:07 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:39:07 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:313 - 45678C 062024
+2024-07-02 14:39:07 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 14:39:07 INFO  PDFEngine.getData:197 - 45678C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Bob Brown.pdf :  : 062024
+2024-07-02 14:39:07 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:39:07 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:270 - path report: D:\!GIT\etax\generated\062024//
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:285 - path file: D:\!GIT\etax\generated\062024//Rei Satya.pdf
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:293 - Masuk mau ngeprint jaspernya
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:297 - Masuk mau fill jaspernya
+2024-07-02 14:39:07 INFO  PDFEngine.generateFile:313 - 56789C 062024
+2024-07-02 14:39:07 INFO  PDFEngine.getData:197 - 56789C : 2024-07-02 : R : Ready to Send : D:\!GIT\etax\generated\062024//Rei Satya.pdf :  : 062024
+2024-07-02 14:39:07 INFO  SQLData.inputLOG:563 - dari input INSERT INTO "tax_log" ("log_id", "log_cif", "log_generate_date", "log_status", "log_message", "log_path_pdf", "log_period", "log_nosurat" ) VALUES(?, ?, ?, ?, ?, ?, ?, ?)
+2024-07-02 14:39:07 INFO  PDFEngine.call:155 - dari call: kelar
+2024-07-02 14:39:08 INFO  PDFEngine.engine:122 - Retrieved result from the task - kelar
+******************** END PROGRAM *******************
+******************* START PROGRAM ******************
+2024-07-02 14:45:33 INFO  Config.init:21 - [OK]
+> File	: config.properties
+2024-07-02 14:45:33 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:45:33 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:45:33 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:45:34 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:45:34 INFO  Param.configure:29 - [OK]
+> Start date	: 01
+> Finish date	: 01
+> Start time	: 14:47:00
+> Finish time	: 23:59:00
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+2024-07-02 14:45:34 WARN  Function.isSchedule:36 - Not schedule!
+> Date now	: 2
+> Start date	: 01
+> Finish date	: 01
+> Last Date This month	: 31
+******************** END PROGRAM *******************
+2024-07-02 14:45:34 INFO  Function.exit:170 - Bye...
+******************* START PROGRAM ******************
+2024-07-02 14:46:17 INFO  Config.init:21 - [OK]
+> File	: config.properties
+2024-07-02 14:46:17 INFO  Database.configure:18 - configure DB [OK]
+2024-07-02 14:46:17 INFO  SQLData.getCommonParam:590 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:46:17 INFO  SQLData.getParameter:598 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-02 14:46:18 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-02 14:46:18 INFO  Param.configure:29 - [OK]
+> Start date	: 02
+> Finish date	: 02
+> Start time	: 14:47:00
+> Finish time	: 23:59:00
+> Pdf path	: D:\!GIT\etax\generated\
+> Pdf source	: pdf/tax_report.jasper
+***************** SCHEDULER: Running ***************
+2024-07-02 14:46:18 INFO  SchedulerBuilder.<init>:21 - [OK]
+> Class 	: id.etax.service.JobMontly
+> Start 	: 14:47:00
+> Finish	: 23:59:00
+> Group 	: groupMonthly
+**************** SCHEDULER: Starting ***************
+2024-07-02 14:47:00 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-02 14:47:00 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-02 14:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-02 14:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-02 14:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-02 14:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-02 14:47:00 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:47:01 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:47:01 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 450000.00 : 20 : 90000.00 : LN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 2700000.00 : 20 : 540000.00 : DN : 062024
+2024-07-02 14:47:01 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 3700000.00 : 20 : 740000.00 : LN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Tabungan : 800000.00 : 20 : 160000.00 : DN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Sertifikat Deposito : 9500000.00 : 20 : 1900000.00 : LN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 650000.00 : 20 : 130000.00 : LN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 980000.00 : 20 : 196000.00 : DN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 1200000.00 : 20 : 240000.00 : LN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 45678C : 654321012345678 : Bob Brown : 101 South St : Jasa Giro : 7800000.00 : 20 : 1560000.00 : DN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Jasa Giro : 600000.00 : 20 : 120000.00 : DN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:47:02 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 1100000.00 : 20 : 220000.00 : DN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 3400000.00 : 20 : 680000.00 : LN : 062024
+2024-07-02 14:47:02 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 8300000.00 : 20 : 1660000.00 : DN : 062024
+2024-07-02 14:47:03 INFO  PDFEngine.engine:87 - 56789C : 543210123456789 : Rei Satya : 202 East St : Sertifikat Bank Indonesia : 4200000.00 : 20 : 840000.00 : LN : 062024
+2024-07-02 14:47:03 INFO  PDFEngine.getData:237 - no data
+2024-07-02 14:47:03 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-02 14:47:03 INFO  PDFEngine.engine:122 - Retrieved result from the task - no data
+******************** END PROGRAM *******************

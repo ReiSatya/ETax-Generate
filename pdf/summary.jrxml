@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="summary" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7f556edb-8d91-4fad-911f-6688b0f0710a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="period" class="java.lang.String"/>
+	<parameter name="subreportDataSummary" class="java.lang.String"/>
+	<parameter name="cif" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT "tax_nama", "tax_npwp", "tax_alamat", "tax_namabank"
+		FROM "tax_stg_etax"  WHERE "tax_nama" =  $P{subreportDataSummary}]]>
+	</queryString>
+	<field name="tax_npwp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tax_npwp"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_npwp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<field name="tax_nama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tax_nama"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_nama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<field name="tax_alamat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tax_alamat"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_alamat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<field name="tax_namabank" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tax_namabank"/>
+		<property name="com.jaspersoft.studio.field.label" value="tax_namabank"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sample_data"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="20" width="304" height="30" uuid="35dbebd2-b138-481e-bf2b-6485de59c7a8"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAX REPORT - SUMMARY]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="60" width="320" height="1" uuid="a8720098-4e6d-41ff-96d0-45ab0543423f"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="170" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="30" uuid="08c19246-7bb2-4019-ace8-81307eb4bca5"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[CUSTOMER NAME  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="160" height="30" uuid="2993b06e-bca4-4b63-b54b-1a5687ea1b4b"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[CIF NUMBER            :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="60" width="160" height="30" uuid="bf93a964-6d76-4ccc-bd3d-5e60c7181b26"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[ADDRESS                 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="90" width="160" height="30" uuid="cf24e8d0-b3dc-47d9-99ea-e46f78af1c4f"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[BRANCH                   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="120" width="160" height="30" uuid="9142070d-3dbb-49e5-a67e-ef401f433a27"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[PERIOD                    :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="170" y="0" width="310" height="30" uuid="df240868-7c7b-49ee-b113-5b391f246cdd"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="30" width="310" height="30" uuid="a2f5791f-feae-427c-920a-13532ffd1d84"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="60" width="310" height="30" uuid="0f75bb94-24bc-46a9-a4f9-7caf2a96e26f"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_alamat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="90" width="310" height="30" uuid="fb670be5-0dc3-4b51-aaf4-075b3372777d"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tax_namabank}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="120" width="310" height="30" uuid="165eda3e-5f79-4c44-bad3-9c97c2cab7a0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{period}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="160" width="320" height="1" uuid="1d6f264a-afae-418a-abca-10928fc85b01"/>
+			</line>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="71">
+			<printWhenExpression><![CDATA[($V{REPORT_COUNT}.intValue()==1)]]></printWhenExpression>
+			<subreport>
+				<reportElement x="0" y="0" width="555" height="60" uuid="3468a8d8-2caf-418b-bfb2-6fb8e00f0e6a"/>
+				<subreportParameter name="subreportDataSummary">
+					<subreportParameterExpression><![CDATA[$P{subreportDataSummary}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["pdf/summary_table.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,35 @@
+******************* START PROGRAM ******************
+2024-07-16 10:46:53 INFO  Config.init:21 - [OK]
+> File	: config.properties
+2024-07-16 10:46:53 INFO  Database.configure:18 - configure DB [OK]
+2024-07-16 10:46:53 INFO  SQLData.getCommonParam:953 - key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-16 10:46:53 INFO  SQLData.getParameter:961 - sql=select "parameter_name", "parameter_value" from "parameter" WHERE , field="parameter_name", key=[START DATE][FINISH DATE][START TIME][FINISH TIME][pdf.path.report][pdf.source.file], isClob=false
+2024-07-16 10:46:54 INFO  DBEngine.execute:63 - [OK] 6 Rows and 2 Column
+2024-07-16 10:46:54 INFO  Param.configure:29 - [OK]
+> Start date	: 11
+> Finish date	: 29
+> Start time	: 13:29:00
+> Finish time	: 23:59:00
+> Pdf path	: /opt/EtaxStatement/generate/generated/
+> Pdf source	: pdf/
+2024-07-16 10:46:55 INFO  PDFEngine.engine:60 - GENERATE START
+2024-07-16 10:46:55 INFO  PDFEngine.engine:62 - PERIOD: 062024
+2024-07-16 10:46:55 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 500000.00 : 20 : 100000.00 : DN : 062024
+2024-07-16 10:46:55 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Tabungan : 1500000.00 : 20 : 300000.00 : LN : 062024
+2024-07-16 10:46:55 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 400000.00 : 20 : 80000.00 : DN : 062024
+2024-07-16 10:46:55 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1300000.00 : 20 : 260000.00 : LN : 062024
+2024-07-16 10:46:55 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 1900000.00 : 20 : 380000.00 : DN : 062024
+2024-07-16 10:46:55 INFO  PDFEngine.engine:87 - 12345C : 987654321012345 : John Doe : 123 Main St : Deposito Berjangka : 2500000.00 : 20 : 500000.00 : LN : 062024
+2024-07-16 10:46:56 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Sertifikat Deposito : 7500000.00 : 20 : 1500000.00 : DN : 062024
+2024-07-16 10:46:56 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Jasa Giro : 200000.00 : 20 : 40000.00 : LN : 062024
+2024-07-16 10:46:56 INFO  PDFEngine.getData:237 - no data
+2024-07-16 10:46:56 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-16 10:46:56 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 700000.00 : 20 : 140000.00 : LN : 062024
+2024-07-16 10:46:56 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 5000000.00 : 20 : 1000000.00 : DN : 062024
+2024-07-16 10:46:56 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 3600000.00 : 20 : 720000.00 : LN : 062024
+2024-07-16 10:46:56 INFO  PDFEngine.engine:87 - 23456C : 876543210123456 : Jane Smith : 456 Side St : Tabungan : 6200000.00 : 20 : 1240000.00 : DN : 062024
+2024-07-16 10:46:57 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Bank Indonesia : 3000000.00 : 20 : 600000.00 : DN : 062024
+2024-07-16 10:46:57 INFO  PDFEngine.getData:237 - no data
+2024-07-16 10:46:57 INFO  PDFEngine.call:155 - dari call: no data
+2024-07-16 10:46:57 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Deposito Berjangka : 1000000.00 : 20 : 200000.00 : LN : 062024
+2024-07-16 10:46:57 INFO  PDFEngine.engine:87 - 34567C : 765432101234567 : Alice Johnson : 789 North St : Sertifikat Deposito : 5200000.00 : 20 : 1040000.00 : DN : 062024
